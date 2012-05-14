@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Missile Defender</title>
+		<meta charset="utf-8">
+		
+		<link href="game.css" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript" src="game.js"></script>
+	</head>
+	
+	<body>
+		<div id="game">
+			<div id="gameUI">
+				<div id="gameIntro">
+					<h1>Missile Defender</h1>
+					<label for="num">How many enemy missiles do you want to challenge?</label><input type="text" name="num" id="num" />
+					<p><button id="gamePlay" class="button">Play</button></p>
+				</div>
+				<div id="gameStats">
+					<p>Missiles destroyed:<span class="gameScore"></span></p>
+					<p>Bullets Remaining:<span class="bulletsLeft"></span><p>
+					<p>Missiles Remaining:<span class="missilesLeft"></span><p>
+				</div>
+				<div id="gameComplete">
+					<h1>Game over!</h1>
+					<p>You destroyed <span class="gameScore"></span> missiles.</p>
+					<p><button class="gameReset">Play again</button></p>
+				</div>
+			</div>
+			<canvas id="gameCanvas" width="800" height="600">
+				<!-- Insert fallback content here -->
+			</canvas>
+			
+			<!-- Audio -->
+			<audio id="gameSoundLaunch">
+				<source src="sounds/launch.mp3">
+				<source src="sounds/launch.ogg">
+			</audio>
+			<audio id="gameSoundHit">
+				<source src="sounds/hit.mp3">
+				<source src="sounds/hit.ogg">
+			</audio>
+		</div>
+	</body>
+</html>
